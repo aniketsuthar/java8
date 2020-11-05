@@ -59,7 +59,6 @@ public class PredicateExample implements Cloneable {
 		this.name = name;
 		this.dept = dept;
 		
-		
 	}
 
 	@Override
