@@ -4,8 +4,8 @@ public class ShallowCopyExample {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		Department d = new Department("EE", "1", 21);
-		Employee e = new Employee(1, "test", d);
-		Employee e2 = (Employee) e.clone();
+		PredicateExample e = new PredicateExample(1, "test", d);
+		PredicateExample e2 = (PredicateExample) e.clone();
 		e2.dept.setDeptName("dadadd");
 		System.out.println("E1" + e);
 //		d.setDeptName("hkjhjkhk");

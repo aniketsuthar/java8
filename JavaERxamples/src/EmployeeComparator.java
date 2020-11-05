@@ -49,6 +49,9 @@ public class EmployeeComparator implements Comparator<Employee> {
 		System.out.println(list.stream().filter(x -> x.getAge() > 20 && x.getAge() <= 30).collect(Collectors.toList()));
 		System.out.println(list.stream().filter(x -> x.getAge() > 30).collect(Collectors.toList()));
 
+		
+		
+		
 //		System.out.println(employe);
 
 //		list.stream().filter
