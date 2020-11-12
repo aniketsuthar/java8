@@ -103,7 +103,22 @@ public class Java8StreamsExample {
 
 		List<Integer> intList = Arrays.asList(1, 2, 44, 4545, 500);
 		intList.stream().reduce(Math::max).ifPresent(System.out::print);
+		System.out.println();
+		String s1 = "Test";
+		String s2 = "Test";
+		String s3 = new String("Test");
+		String s4 = s3.intern();
+		System.out.println();
 
+		System.out.println(s1 == s2);
+		System.out.println(s2 == s3);
+		System.out.println(s3 == s4);
+		System.out.println(s1 == s4);
+		System.out.println(s1 == s3);
+		System.out.println(s1.equals(s4));
+		System.out.println(s2.equals(s3));
+		System.out.println(s2.equals(s4));
+		System.out.println(s3.equals(s4));
 	}
 
 	@FunctionalInterface

@@ -5,8 +5,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.xml.bind.JAXBException;
-
 public class EmployeeComparator implements Comparator<Employee> {
 
 	@Override
@@ -22,10 +20,6 @@ public class EmployeeComparator implements Comparator<Employee> {
 			return 0;
 		}
 		return 0;
-	}
-
-	public static void foo() throws IOException, FileNotFoundException, JAXBException {
-
 	}
 
 	public static void main(String[] args) {
@@ -49,9 +43,6 @@ public class EmployeeComparator implements Comparator<Employee> {
 		System.out.println(list.stream().filter(x -> x.getAge() > 20 && x.getAge() <= 30).collect(Collectors.toList()));
 		System.out.println(list.stream().filter(x -> x.getAge() > 30).collect(Collectors.toList()));
 
-		
-		
-		
 //		System.out.println(employe);
 
 //		list.stream().filter
