@@ -2,13 +2,35 @@ class Thread1 extends Thread {
 
 	@Override
 	public void run() {
+		getAllStackTraces().entrySet().forEach(System.out::println);
+
 		// TODO Auto-generated method stub
 		for (int i = 0; i < 10; i++)
-			print();
+			try {
+//				print(i);
+				synchronizedPrintMethod(i);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 
-	synchronized void print() {
-		System.out.println("Print:" + getName());
+	public void print(int i) throws InterruptedException {
+		synchronized (this) {
+			System.out.println("Print:" + getName() + " " + i);
+
+		}
+		for (int j = 0; j < 100; j++) {
+			System.out.println(j);
+		}
+
+	}
+
+	public synchronized void synchronizedPrintMethod(int i) throws InterruptedException {
+		System.out.println("synchronizedPrintMethod:" + getName() + " " + i);
+		for (int j = 0; j < 100; j++) {
+			System.out.println(j);
+		}
 	}
 
 	public int add(int a, int b) {
