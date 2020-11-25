@@ -15,6 +15,7 @@ public class DuplicateElementInArray {
 	public static void main(String[] args) {
 		int[] array = { 30, 20, 30, 40, 70, 60 ,50};
 
+		
 		printDupElem(array);
 
 	}
